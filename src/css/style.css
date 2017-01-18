@@ -314,6 +314,7 @@ ul {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
+    padding: 0;
   }
   .points-list {
     min-width: 320px;
@@ -333,9 +334,14 @@ ul {
   .score-board {
     font-size: 16px;
     margin: 0 10px 24px;
+    text-align: center;
   }
   .score-board span {
+    display: inline-block;
     margin-bottom: 7px;
+  }
+  .score-board span:first-child:after {
+    content: ' / ';
   }
   .ship-board {
     display: -webkit-box;
@@ -351,14 +357,15 @@ ul {
         -ms-flex-align: start;
             align-items: flex-start;
     max-height: 190px;
+    margin-bottom: 0;
   }
   .ship {
     width: 40%;
   }
   .ship-image {
     margin-right: 10px;
-    width: 120px;
-    height: 32px;
+    width: 60px;
+    height: 16px;
   }
   .ship-point {
     width: 10px;
