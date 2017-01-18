@@ -1,0 +1,173 @@
+// Import all partials
+@require './_*.styl'
+
+
+ul
+  list-style none
+  margin 0
+  padding 0
+
+.miscPage
+  text-align center
+  padding 10%
+
+pointSize = 72px
+shipPointSize = 24px
+boardSize = 10
+
+.game
+  margin 0 auto
+  padding 10px 0
+  background #fff
+  max-width 1440px
+  margin 0 auto
+  display flex
+  flex-direction row
+  justify-content center
+
+.points-list
+  display inline-block
+  vertical-align top
+  font-size 0
+  line-height 1
+  min-width pointSize * boardSize + 8px * 2
+  width pointSize * boardSize + 8px * 2
+  border: 8px solid #ffb000;
+  margin 0 0 0 32px
+
+.board-point 
+  display inline-block
+  vertical-align top
+  background transparent
+  
+  button
+    display inline-block
+    vertical-align top
+    width pointSize
+    height pointSize
+    background transparent
+    border 1px solid #979797
+    font-weight 600
+    margin 0
+    padding 0
+
+.board-point__win
+  background-color #fcc7c8
+  background-image embedurl('images/hit.png')
+  background-size 100% 100%
+    
+.board-point__fail
+  background embedurl('images/fail.png')
+  background-size 100% 100%
+
+
+.score-list
+  order -1
+  
+.score-board
+  font-size 32px
+  margin-bottom 48px
+  
+  span 
+    display block
+    margin-bottom 10px;
+
+.ship-board
+
+.ship
+  font-size 0
+  margin-bottom 20px
+  white-space nowrap
+  
+.ship-image 
+  display inline-block
+  vertical-align middle
+  margin-right 30px
+  width (480px / 2)
+  height (128px / 2)
+  background-size 100% auto
+
+.ship-image_carrier {
+  background-image embedurl('images/carrier.png')
+}
+
+.ship-image_battleship {
+  background-image embedurl('images/battleship.png')
+}
+
+.ship-image_cruiser {
+  background-image embedurl('images/cruiser.png')
+}
+
+.ship-image_submarine {
+  background-image embedurl('images/submarine.png')
+}
+
+.ship-image_destroyer {
+  background-image embedurl('images/destroyer.png')
+}
+
+.ship-point {
+  display inline-block
+  vertical-align middle
+  width shipPointSize
+  height shipPointSize
+  border 1px solid #a5a4a4
+  border-radius 100%
+  margin-right 20px
+}
+    
+.ship-point_hit {
+  background-image embedurl('images/hit.png')
+  background-size 100% 100%
+  border-color transparent
+  border-radius 0
+}
+    
+
+@media (max-width: 768px) 
+  .game
+    flex-direction column
+    
+  .points-list 
+    min-width 320px
+    width 320px
+    border-width: 5px;
+    margin 0 auto 16px;
+    
+  .board-point     
+    button
+      width 31px
+      height 31px
+      
+  .score-list 
+    order 2
+    
+  .score-board
+    font-size 16px
+    margin 0 10px 24px
+    
+    span 
+      margin-bottom 7px
+      
+  .ship-board
+    display flex
+    flex-direction column
+    flex-wrap wrap
+    align-items: flex-start
+    max-height 190px
+    
+  .ship
+    width 40%
+    
+  .ship-image 
+    margin-right 10px
+    width (480px / 4)
+    height (128px / 4)
+    
+
+  .ship-point {
+    width 10px
+    height 10px
+    margin-right 8px
+  }
