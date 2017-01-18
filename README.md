@@ -1,2 +1,2 @@
 # Battleship game assigment
-[Play](https://ns-iewagvkrye.now.sh/)
+[Play](https://ns-famslabpiy.now.sh)
